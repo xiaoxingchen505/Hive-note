@@ -23,17 +23,17 @@ LOAD DATA [LOCAL] INPATH 'filepath' [OVERWRITE] INTO TABLE tablename
 
 实例：
 
-## 创建一个新数据库
+### 创建一个新数据库
 ```sql
 CREATE DATABASE census;
 ```
 
-## 使用该数据库
+### 使用该数据库
 ```sql
 use census;
 ```
 
-## 创建一个新表
+### 创建一个新表
 CREATE TABLE person {
     persid int,
     lastname string,
@@ -41,12 +41,12 @@ CREATE TABLE person {
 }
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
 
-## 将数据从csv 文件装载到该新表
+### 将数据从csv 文件装载到该新表
 ```sql
 LOAD DATA LOCAL INPATH 'file:///root/hive/example/person001' OVERWRITE INTO TABLE person.
 ```
 
-## 最后查看表中是否有数据
+### 最后查看表中是否有数据
 ```sql
 SELECT persid, lastname, firstname
 FROM person;
