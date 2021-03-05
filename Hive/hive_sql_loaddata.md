@@ -132,3 +132,18 @@ exit;
 ```
 hadoop fs -cat 'exampleoutput/000000_0'
 ```
+
+## 4. 直接向表插入值
+Hive支持一系列静态值直接将数据装载到表中
+
+语法如下:
+```sql
+INSERT 
+INTO TABLE tablename
+VALUES (row_values1),(row_value2);
+```
+
+|  INSERT   | 用于将数据装载到Hive表中的关键字 |
+|----------|------------|
+| TABLE tablename | tablename是Hive中已有表的名称，使用CREATE TABLE tablename语句 |
+| VALUES (row_values1),(row_value2) | 值row_values1 和row_values2是相同格式的单条记录，而不是表的记录 |
