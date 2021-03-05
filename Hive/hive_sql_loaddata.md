@@ -162,3 +162,31 @@ SET column = value
 | tablename | tablename是Hive中已有表的名称，使用CREATE TABLE tablename语句 |
 | SET column = value | SET命令更新该列的一个值 |
 | [WHERE expression] | WHERE可用于为不同的查询挑选特定列的值 |
+
+## 6. 在表中直接删除数据
+Hive支持直接在表中删除数据
+Hive语法如下：
+```sql
+DELETE tablename
+[WHERE expression];
+```
+
+|  DELETE   | 用于删除表中值的关键字 |
+|----------|------------|
+| tablename | tablename是Hive中已有表的名称，使用CREATE TABLE tablename语句 |
+| [WHERE expression] | WHERE可用于为不同的查询挑选特定列的值 |
+
+
+## 7.创建结构相同的表
+Hive支持基于一个已有表的结构创建一个新表
+Hive语法如下：
+```sql
+CREATE TABLE blank_tablename
+LIKE tablename;
+```
+
+|  CREATE TABLE   | 创建表的关键字 |
+|----------|------------|
+|  blank_tablename   |  待创建表的名称 |
+| tablename | 该表名是Hive中已有表的名称，使用CREATE TABLE tablename语句 |
+| LIKE | 该表名是Hive中已有表的名称。使用CREATE TABLE tablename语句 |
