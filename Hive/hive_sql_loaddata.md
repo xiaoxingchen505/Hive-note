@@ -12,6 +12,7 @@ LOAD DATA [LOCAL] INPATH 'filepath' [OVERWRITE] INTO TABLE tablename
 ```
 
 |  LOAD DATA   | 向Hive装载数据的关键字  |
+|----------|------------|
 | LOCAL  | 如果包含该关键字，则支持用户从其本地文件装载数据 |
 |        |  如果省略该关键字，则从Hadoop配置变量 fs.default.name中设定的路径加载文件 |
 | INPATH 'filepath' | 如果使用LOCAL: file://user/hive.example |
