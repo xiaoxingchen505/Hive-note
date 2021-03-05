@@ -94,3 +94,21 @@ SELECT DISTINCT personId FROM Person
 ```sql
 SELECT persid FROM personhub;
 ```
+
+## 3.将查询到的数据写入文件系统
+
+Hive支持将查询到的数据装载到Hadoop分布式文件系统中。
+Hive语法如下
+```sql
+INSERT [OVERWRITE]
+DIRECTORY directoryname
+SELECT select_fields FROM from_statement;
+```
+|  INSERT   | 用于将数据装载到Hive表中的关键字 |
+|----------|------------|
+| OVERWRITE  | 如果包含该关键字，支持用户将数据装载到已经建好的目录中，并且替换之前的数据 , <br> 如果省略，支持用户将数据装载到已经建好的目录中，并且新数据追加到之前的数据后面 |
+| DIRECTORY directoryname | directoryname是Hadoop分布式文件系统中已有的目录名称, <br> directoryname是hadoop分布式文件系统中已有的目录名称，<br>这可以是任何针对Hive生态系统的SELECT命令 |
+| SELECT | 这可以是针对Hive生态系统的任何Select命令｜
+| select_fields|
+| FROM | 
+| from_statement| 
