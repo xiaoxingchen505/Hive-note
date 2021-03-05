@@ -129,4 +129,6 @@ exit;
 ```
 
 测试一下是否所有数据都已经装载
+```
 hadoop fs -cat 'exampleoutput/000000_0'
+```
