@@ -68,8 +68,8 @@ SELECT select_fields FROM from_statement;
 |        |  如果省略，支持用户将数据装载到已经建好的表中，并且新数据追加到以前的数据之后 |
 | TABLE tablename | tablename 是Hive已有的表名。 使用CREATE TABLE tablename语句 |
 | IF NOT EXISTS | 如果在命令中包含了 IF NOT EXISTS，那么Hive命令将在当前数据库中创建一个表|
-| | 如果省略，当该表不存在时将执行失败|
+| ----- | 如果省略，当该表不存在时将执行失败|
 | SELECT | 这可以是针对Hive生态系统的任何Select命令｜
 | select_fields| tablename是hive中已经存在的表的名称，使用create TABLE tablename｜
-| FROM | ｜
-| from_statement| ｜
+| FROM | 
+| from_statement| 
