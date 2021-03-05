@@ -63,6 +63,7 @@ SELECT select_fields FROM from_statement;
 ```
 
 |  INSERT   | 用于将数据装载到Hive表中的关键字 |
+|----------|------------|
 | OVERWRITE  | 如果包含该关键字，支持用户将数据装载到已经建好的表中，并且替换之前的数据 |
 |        |  如果省略，支持用户将数据装载到已经建好的表中，并且新数据追加到以前的数据之后 |
 | TABLE tablename | tablename 是Hive已有的表名。 使用CREATE TABLE tablename语句 |
