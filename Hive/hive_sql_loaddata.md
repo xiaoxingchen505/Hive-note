@@ -69,3 +69,28 @@ SELECT select_fields FROM from_statement;
 | select_fields|
 | FROM | 
 | from_statement| 
+
+
+### 使用已有表创建新表
+
+使用已有数据库
+```sql
+USE census;
+```
+创建新表
+```sql
+CREATE TABLE personhub(
+    persid int
+);
+```
+将数据插入新表，覆盖表中已有数据
+```sql
+INSERT OVERWRITE
+TABLE personhub
+SELECT DISTINCT personId FROM Person
+```
+检查数据是否已在表中
+
+```sql
+SELECT persid FROM personhub;
+```
