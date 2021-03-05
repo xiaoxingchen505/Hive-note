@@ -112,3 +112,17 @@ SELECT select_fields FROM from_statement;
 | select_fields|
 | FROM | 
 | from_statement| 
+
+### 使用已有表创建输出目录
+```
+hadoop fs -mkdir 'exampleoutput'
+```
+
+```
+USE census;
+INSERT OVERWRITE DIRECTORY 'exampleoutput'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+SELECT persid, firstname,lastname
+FROM person;
+
+exit;
