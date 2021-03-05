@@ -14,4 +14,4 @@
 
 4.  [Hive数据查询](Hive/hive_sql_select.md) </br>
 
-5.  [Hive查询半结构化数据](Hive/hive_sql_select2.md) </br>
+5.  [Hive连接表](Hive/hive_sql_join.md) </br>

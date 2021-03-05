@@ -1,9 +1,9 @@
 
 
-# Hive数据装载
+# Hive 数据装载
 
 
-## 1.使用存储在HDFS中的文件装载数据
+## 1. 使用存储在HDFS中的文件装载数据
 
 Hive支持从hadoop分布式系统(HDFS)上传文件。这是将数据迁移到Hive生态系统最基本的方法。
 
@@ -50,7 +50,7 @@ FROM person;
 ```
 
 
-## 2.使用查询装载数据
+## 2. 使用查询装载数据
 Hive支持将已有表查询到的数据装载到Hive生态系统中。
 
 Hive语法如下
@@ -95,7 +95,7 @@ SELECT DISTINCT personId FROM Person
 SELECT persid FROM personhub;
 ```
 
-## 3.将查询到的数据写入文件系统
+## 3. 将查询到的数据写入文件系统
 
 Hive支持将查询到的数据装载到Hadoop分布式文件系统中。
 Hive语法如下
@@ -177,7 +177,7 @@ DELETE tablename
 | [WHERE expression] | WHERE可用于为不同的查询挑选特定列的值 |
 
 
-## 7.创建结构相同的表
+## 7. 创建结构相同的表
 Hive支持基于一个已有表的结构创建一个新表
 Hive语法如下：
 ```sql
