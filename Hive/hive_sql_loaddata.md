@@ -147,3 +147,18 @@ VALUES (row_values1),(row_value2);
 |----------|------------|
 | TABLE tablename | tablename是Hive中已有表的名称，使用CREATE TABLE tablename语句 |
 | VALUES (row_values1),(row_value2) | 值row_values1 和row_values2是相同格式的单条记录，而不是表的记录 |
+
+## 5. 直接更新表中数据
+Hive支持直接将数据更新到表中
+Hive语法如下：
+```sql
+UPDATE tablename
+SET column = value
+[WHERE expression];
+```
+
+|  INSERT   | 用于更新表中值的关键字 |
+|----------|------------|
+| tablename | tablename是Hive中已有表的名称，使用CREATE TABLE tablename语句 |
+| SET column = value | SET命令更新该列的一个值 |
+| [WHERE expression] | WHERE可用于为不同的查询挑选特定列的值 |
