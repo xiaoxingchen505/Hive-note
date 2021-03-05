@@ -28,6 +28,7 @@ ON (table_one.key_one = table_two.key_one AND table_one.key_two = table_two.key_
 
 
 ### 使用左连接方式连接Hive中的表
+LEFT JOIN 关键字会从左表 (table_name1) 那里返回所有的行，即使在右表 (table_name2) 中没有匹配的行。
 ```sql
 SELECT personname.firstname,personname.lastname,address,postname
 FROM census.personname
@@ -36,7 +37,7 @@ ON (personname.persid = address.persid);
 ```
 
 ### 使用右连接方式连接Hive中的表
-
+RIGHT JOIN 关键字会右表 (table_name2) 那里返回所有的行，即使在左表 (table_name1) 中没有匹配的行。
 
 ```sql
 SELECT personname.firstname,personname.lastname,address,postname
