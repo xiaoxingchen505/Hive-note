@@ -59,3 +59,9 @@ select get_json_object(json_table.json,'$.balance') as balance,
     get_json_object(json_table.json,'$.friends.name') as friendname,
 from json_udf;
 ```
+
+
+
+## 3.条件查询,分组，排序
+
+可以参考以下[转载](https://www.cnblogs.com/duoduotouhenying/p/10145478.html#_label1_0)
